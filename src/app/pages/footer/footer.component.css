@@ -1,0 +1,72 @@
+/* Footer Background */
+.footer-section {
+    background: #0F1F3C;
+}
+
+/* Logo */
+.footer-logo {
+    width: 180px;
+}
+
+/* Social Icons */
+.social-icon {
+    width: 35px;
+    height: 35px;
+    background: #1E2E4D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.social-icon a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icon:hover {
+    background: #ED7823;
+}
+
+/* Links */
+.footer-links li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.footer-links li:hover {
+    color: #ED7823;
+}
+
+/* Newsletter Box */
+.newsletter-box {
+    background: #10141a;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Input */
+.newsletter-box .form-control {
+    border: none;
+    font-size: 14px;
+}
+
+.newsletter-box .form-control:focus {
+    box-shadow: none;
+}
+
+/* Button */
+.btn-orange {
+    background: #ED7823;
+    color: white;
+}
+
+.btn-orange:hover {
+    background: #ff6a00;
+    color: white;
+}

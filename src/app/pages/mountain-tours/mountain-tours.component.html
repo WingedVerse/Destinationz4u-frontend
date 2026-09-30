@@ -1,0 +1,52 @@
+<!-- HERO SECTION -->
+<section class="hero d-flex align-items-center justify-content-center">
+
+  <div class="hero-content text-center">
+
+    <h1>Mountain Tours </h1>
+
+    <div class="breadcrumb-text">
+      <span style="color: #ed7823; font-weight: 700;">Home</span> >> Asia
+    </div>
+  </div>
+</section>
+
+
+
+<!--Section 2 -->
+
+<section class="destination-section">
+
+  <div class="card-grid">
+    <div class="card" *ngFor="let item of destinations">
+      <div class="card-img-container">
+        <img [src]="item.img">
+        <span class="rating-badge">⭐ {{item.rating}}</span>
+        <button class="fav-btn"><i class="bi bi-heart"></i></button>
+      </div>
+
+      <div class="card-body">
+        <h3 class="card-title">{{item.title}}</h3>
+        <p class="location-text"><i class="bi bi-geo-alt"></i> {{item.location}}</p>
+        <div class="divider"></div>
+        <div class="card-footer">
+          <!-- <span class="duration"><i class="bi bi-clock"></i> {{item.days}} Days</span> -->
+          <div class="price-container">
+            <!-- <span class="price-label">Start From</span>
+            <span class="price-value">${{item.price}}</span> -->
+            <ul class="highlights-list text-start">
+              <li *ngFor="let point of item.highlights">
+                {{ point }}
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button class="more-btn" (click)="viewDetails(item.id)">
+              <p>Know More</p>&nbsp;<i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

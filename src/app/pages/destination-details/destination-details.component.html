@@ -1,0 +1,229 @@
+<!-- HERO SECTION -->
+<section class="container-fluid hero-section bg-secondary">
+    <div class="row">
+        <div *ngIf="destination" class="col-md-9 hero" [style.backgroundImage]="'url(' + destination.info.herobg + ')'">
+            <div class="hero-content">
+                <h1>{{ destination.info.title }}</h1>
+
+                <div class="breadcrumb-text">
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i> {{ destination.info.location }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-center justify-content-center">
+            <div class="flight-card">
+
+                <div class="flight-card-inner">
+
+                    <h5 class="fw-semibold mb-3 text-center section-title">Perfect for</h5>
+
+                    <!-- Tags -->
+                    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                        <span class="tag" *ngFor="let p of destination.info.perfectFor">
+                            {{p}}
+                        </span>
+                    </div>
+
+                    <hr>
+
+                    <!-- Details -->
+                    <div class="row text-center mb-3">
+                        <div class="col-6 info-block">
+                            <small><i class="fa-regular fa-clock"></i> Duration</small>
+                            <div class="value">{{destination.info.duration}} days</div>
+                        </div>
+                        <div class="col-6 info-block">
+                            <small><i class="fa-regular fa-map"></i> Places</small>
+                            <div class="value">{{destination.info.placesCount}}</div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center mb-4">
+                        <div class="col-6 info-block">
+                            <small><i class="fa-regular fa-star"></i> Rating</small>
+                            <div class="value">{{destination.info.rating}}</div>
+                        </div>
+                        <div class="col-6 info-block">
+                            <small><i class="fa-solid fa-truck-plane"></i> Transport</small>
+                            <div class="value">
+                                <ng-container *ngFor="let t of destination.info.transport; let i = index">
+                                    {{ t }}<span *ngIf="i < destination.info.transport.length - 1"> • </span>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn book-btn w-100" routerLink="/contact">
+                        Book Now&nbsp;&nbsp;<i class="fa-regular fa-calendar-check fa-lg"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="overflow-hidden row about">
+    <div class="col-sm-8 col-md-6 about-desc">
+        <!-- LEFT -->
+        <p class="badge bg-info text-dark d-inline-flex rounded-5 align-items-center gap-2 px-4 py-2 mb-3"
+            data-aos="fade-right">
+            <i class="fa-solid fa-plane"></i>
+            Destination List
+        </p>
+
+        <h2 class="fw-bold mb-3 tour-title" data-aos="fade-right">
+            About {{destination.info.title}}
+        </h2>
+
+        <p class="mb-4 text-dark" data-aos="fade-right">{{destination.info.aboutDescription}}
+        </p>
+
+        <button class="btn btn-orange discover-btn rounded-pill px-4 py-2 shadow" data-aos="fade-up" routerLink="/contact">
+            Contact Now&nbsp; <i class="fa-solid fa-circle-arrow-right fa-lg"></i>
+        </button>
+    </div>
+    <div class="col-sm-4 col-md-4 map">
+        <iframe [src]="safeMapUrl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+
+<section id="places" class="py-5 ">
+
+    <div class="container">
+
+        <!-- TITLE -->
+        <div class="text-center mb-5">
+            <p class="text-uppercase small mb-2 text-white" data-aos="fade-up">
+                <i class="fa-solid fa-newspaper me-2"></i> Top Places To Visit
+            </p>
+            <h2 class="fw-bold place-title" data-aos="fade-up">
+                Must visit places in {{destination.info.title}}
+            </h2>
+        </div>
+
+
+        <!-- PLACE CARDS -->
+        <div class="row g-4">
+
+            <!-- PLACE 1 -->
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" *ngFor="let place of destination.info.places">
+                <div class="card place-card h-100 border-0 shadow">
+                    <img loading="lazy" [src]="place.img" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="fw-semibold mb-2">
+                            {{place.name}}
+                        </h5>
+                        <p class="small text-muted mb-2">{{place.desc}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section id="activities" class="bg-light my-5 py-5 bg-white overflow-hidden">
+
+    <div class="container">
+        <!-- TITLE -->
+        <div class="text-center mb-5">
+            <p class="text-uppercase small mb-2 cl-primary" data-aos="fade-up">
+                <i class="fa-solid fa-newspaper me-2"></i> Top Activities
+            </p>
+            <h2 class="fw-bold place-title" data-aos="fade-up">
+                Must try activities in {{destination.info.title}}
+            </h2>
+        </div>
+
+        <div class="row g-5 align-items-start">
+
+            <!-- RIGHT SCROLL -->
+            <div class="">
+
+                <div #scrollContainer class="d-flex gap-4 overflow-auto activity-scroll" data-aos="fade-up">
+
+                    <!-- CARD -->
+                    <div class="activity-card text-center" *ngFor="let activity of destination.info.activities">
+                        <div class="activity-img">
+                            <img loading="lazy" [src]="activity.img">
+                        </div>
+                        <div class="activity-text">
+                            <span>{{activity.name}}</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="activity-indicators d-flex justify-content-center mt-3">
+                    <span *ngFor="let dot of [0,1,2]; let i = index" class="dot" [class.active]="i === activeIndex"
+                        (click)="scrollToStep(i)">
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section class="container my-5">
+    <div class="row align-items-center">
+
+        <!-- LEFT IMAGE -->
+        <div class="col-md-5 text-center mb-4 mb-md-0">
+            <img src="assets/destinationz4upost.jpeg" class="img-fluid rounded-4 shadow" alt="FAQ Image">
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="col-md-7">
+            <h2 class="fw-bold mb-4">Frequently Asked Question</h2>
+
+            <div class="accordion" id="faqAccordion">
+
+                <!-- Item 1 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded-3"
+                    *ngFor="let faq of destination.info.faq; let i = index">
+
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                            [attr.data-bs-target]="'#faq' + i">
+
+                            {{faq.question}}
+                        </button>
+                    </h2>
+
+                    <div [id]="'faq' + i" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                        <div class="accordion-body text-muted">
+                            {{faq.answer}}
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<app-contact></app-contact>

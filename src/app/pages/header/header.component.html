@@ -1,0 +1,272 @@
+<!-- 🔹 Main Navbar -->
+<nav class="navbar navbar-expand-md main-navbar px-3 px-md-4 px-lg-5">
+
+    <div class="container-fluid align-items-center">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="">
+            <img src="assets/Logo Final_1.2.png" class="logo-img">
+        </a>
+
+        <!-- Mobile Button -->
+        <button (click)="toggleMenu()" class="btn fs-3 text-white border-0 menu-button">
+            ☰
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="align-items-center flex-grow-1" id="menu">
+            <!-- 🔹 Top Info Bar -->
+            <div class="top-bar d-flex justify-content-between align-items-center px-4 px-lg-5">
+
+                <!-- Left -->
+                <div class="d-flex gap-4 text-white small contact-icons">
+                    <span><i class="fa-solid fa-location-dot px-1"></i> Hyderabad, India.</span>
+                    <span><i class="fa-solid fa-envelope px-1"></i> <a class="contact-info text-white"
+                            href="mailto:sales@destinationz4u.in">sales&#64;<span class="company-name">destinationz4u</span>.in</a></span>
+                </div>
+
+                <!-- Right -->
+                <div class="d-flex gap-3 text-white small align-items-center">
+                    <!-- <span><i class="fa-solid fa-user"></i> Sign in / Register</span> -->
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1EKR4LfAE9/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/919963360093" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/destinationz4u__?igsh=ODhmZDg2dDVhaGFj" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- White Rounded Menu -->
+            <div class="menu-box d-flex align-items-center w-100">
+
+                <!-- Menu -->
+                <ul class="navbar-nav flex-row gap-4 mx-3">
+
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/home" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                    </li>
+
+                    <!-- About -->
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/about" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }">About</a>
+                    </li>
+
+                    <!-- India Dropdown -->
+                    <li class="nav-item dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:false }">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            India
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="destination/andaman" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Andaman & Nicobar</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/lakshadweep" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Lakshadweep</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/ladakh" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Ladakh</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/goa" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Goa</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Asia Dropdown -->
+                    <li class="nav-item dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:false }">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Asia
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="destination/thailand" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Thailand</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/indonesia" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Indonesia</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/malaysia" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Malaysia</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/singapore" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Singapore</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/vietnam" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Vietnam</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/philippines" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Philippines</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/laos" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Laos</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Islands & Luxury Dropdown -->
+                    <li class="nav-item dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:false }">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Islands & Luxury
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="destination/maldives" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Maldives</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/mauritius" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Mauritius</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/seychelles" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Seychelles</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/srilanka" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Srilanka</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Middle East Dropdown -->
+                    <li class="nav-item dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:false }">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Middle East
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="destination/dubai" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Dubai</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/abu-dhabi" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Abu Dhabi</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/baku" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Baku</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/georgia" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Georgia</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/kazakhstan" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Kazakhstan</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/uzbekistan" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Uzbekistan</a></li>
+                            <li><a class="dropdown-item" routerLink="destination/macau" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }">Macau</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Contact -->
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/contact" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }">Contact</a>
+                    </li>
+
+                </ul>
+
+                <!-- Right Side -->
+                <div class="ms-auto d-flex align-items-center gap-3">
+
+                    <div class="call-box d-none d-lg-flex align-items-center">
+                        <i class="fa-solid fa-phone-volume"
+                            style="background-color: #3266B1; color: #fff; padding: .5rem; border-radius: 20rem;"></i>
+                        <span><a class="contact-info" href="tel:+919963360093">(+91) 99633 60093</a></span>
+                    </div>
+
+                    <a class="contact-info" href="tel:+919963360093"><button class="btn btn-orange">Start
+                            Booking</button></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- 🔹 Mobile Menu -->
+<div *ngIf="isMenuOpen" class="mobile-menu">
+    <!-- Mobile Button -->
+    <button (click)="closeMenu()" class="btn fs-3 text-end border-0 close-btn">
+        X
+    </button>
+    <ul class="list-unstyled text-center mb-4">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                (click)="closeMenu()">Home </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/about" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">About</a>
+        </li>
+        <!-- India Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" (click)="toggleDropdown('india')">
+                India
+            </a>
+            <ul class="dropdown-menu" [class.show]="openDropdown === 'india'">
+                <li><a class="dropdown-item" routerLink="destination/andaman" (click)="closeMenu()">Andaman &
+                        Nicobar</a></li>
+                <li><a class="dropdown-item" routerLink="destination/lakshadweep" (click)="closeMenu()">Lakshadweep</a>
+                </li>
+                <li><a class="dropdown-item" routerLink="destination/ladakh" (click)="closeMenu()">Ladakh</a></li>
+                <li><a class="dropdown-item" routerLink="destination/goa" (click)="closeMenu()">Goa</a></li>
+            </ul>
+        </li>
+
+        <!-- Asia Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" (click)="toggleDropdown('asia')">
+                Asia
+            </a>
+            <ul class="dropdown-menu" [class.show]="openDropdown === 'asia'">
+                <li><a class="dropdown-item" routerLink="destination/thailand" (click)="closeMenu()">Thailand</a></li>
+                <li><a class="dropdown-item" routerLink="destination/indonesia" (click)="closeMenu()">Indonesia</a></li>
+                <li><a class="dropdown-item" routerLink="destination/malaysia" (click)="closeMenu()">Malaysia</a></li>
+                <li><a class="dropdown-item" routerLink="destination/singapore" (click)="closeMenu()">Singapore</a></li>
+                <li><a class="dropdown-item" routerLink="destination/vietnam" (click)="closeMenu()">Vietnam</a></li>
+                <li><a class="dropdown-item" routerLink="destination/philippines" (click)="closeMenu()">Philippines</a>
+                </li>
+                <li><a class="dropdown-item" routerLink="destination/laos" (click)="closeMenu()">Laos</a></li>
+            </ul>
+        </li>
+
+        <!-- Islands & Luxury Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" (click)="toggleDropdown('islands')">
+                Islands & Luxury
+            </a>
+            <ul class="dropdown-menu" [class.show]="openDropdown === 'islands'">
+                <li><a class="dropdown-item" routerLink="destination/maldives" (click)="closeMenu()">Maldives</a></li>
+                <li><a class="dropdown-item" routerLink="destination/mauritius" (click)="closeMenu()">Mauritius</a></li>
+                <li><a class="dropdown-item" routerLink="destination/seychelles" (click)="closeMenu()">Seychelles</a>
+                </li>
+                <li><a class="dropdown-item" routerLink="destination/srilanka" (click)="closeMenu()">Srilanka</a></li>
+            </ul>
+        </li>
+
+        <!-- Middle East Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" (click)="toggleDropdown('middle-east')">
+                Middle East
+            </a>
+            <ul class="dropdown-menu" [class.show]="openDropdown === 'middle-east'">
+                <li><a class="dropdown-item" routerLink="destination/dubai" (click)="closeMenu()">Dubai</a></li>
+                <li><a class="dropdown-item" routerLink="destination/abu-dhabi" (click)="closeMenu()">Abu Dhabi</a></li>
+                <li><a class="dropdown-item" routerLink="destination/baku" (click)="closeMenu()">Baku</a></li>
+                <li><a class="dropdown-item" routerLink="destination/georgia" (click)="closeMenu()">Georgia</a></li>
+                <li><a class="dropdown-item" routerLink="destination/kazakhstan" (click)="closeMenu()">Kazakhstan</a>
+                </li>
+                <li><a class="dropdown-item" routerLink="destination/uzbekistan" (click)="closeMenu()">Uzbekistan</a>
+                </li>
+                <li><a class="dropdown-item" routerLink="destination/macau" (click)="closeMenu()">Macau</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Contact</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <div class="text-center">
+        <div class="call-box justify-content-center mb-3">
+            <a class="" style="color: #ED7823; text-decoration: none;" href="tel:+919963360093"><i
+                    class="fa-solid fa-phone-volume"></i>
+                <span> (+91) 99633 60093</span></a>
+        </div>
+
+        <a class="contact-info" href="tel:+919963360093"><button class="btn btn-orange w-100">Start Booking</button></a>
+    </div>
+
+</div>

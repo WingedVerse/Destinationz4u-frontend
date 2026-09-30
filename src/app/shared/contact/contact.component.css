@@ -1,0 +1,43 @@
+/* Background */
+.contact-section {
+    background-color: #ED7823;
+}
+
+/* Heading color */
+.heading-color {
+    color: #1E3A5F;
+}
+
+/* Custom Button */
+.btn-dark-blue {
+    background-color: #1E3A5F;
+    color: #fff;
+    border: none;
+}
+
+.btn-dark-blue:hover {
+    background-color: #16304d;
+}
+
+/* Right panel */
+.right-panel {
+    background-color: #1E3A5F;
+}
+
+/* Info boxes */
+.info-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+/* Social hover */
+.social-icons i {
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.social-icons i:hover:nth-child(1) {
+    color: #ED7823;
+}

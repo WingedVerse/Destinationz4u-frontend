@@ -1,0 +1,845 @@
+/* HERO SECTION */
+.page-hero {
+    margin-top: 5rem;
+    height: 450px;
+    background-image: url("/assets/hill cimb.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* GREEN OVERLAY */
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3267b156;
+}
+
+/* CONTENT */
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 700px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* TITLE */
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* PARAGRAPH */
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* BREADCRUMB */
+.breadcrumb-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width:992px) {
+    .hero-content h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:768px) {
+    .page-hero {
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:480px) {
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+}
+
+
+
+
+/* ===================== */
+/* PARADISE VILLAGE */
+/* ===================== */
+.village-section {
+    background: white;
+}
+
+.about-label {
+    color: #3266b1;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-heading {
+    color: black;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Fix for Stats Text Colors */
+.stat-box h3 {
+    color: #3266b1;
+    font-weight: 800;
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 15px;
+    /* Adjust this value (e.g., 10px, 20px) to move it more or less */
+}
+
+/* Make sure the 'p' tag moves with it so they stay aligned */
+.stat-box p {
+    color: #777;
+    font-size: 0.9rem;
+    padding-left: 25px;
+}
+
+.learn-btn {
+    background: #ed7823;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+}
+
+.learn-btn i {
+    margin-right: 8px;
+    /* Space between icon and text */
+    font-size: 1rem;
+    /* Adjust size as needed */
+    vertical-align: middle;
+}
+
+.learn-btn:hover {
+    background: #ed7823;
+}
+
+/* IMAGE COLLAGE */
+
+
+/* Container for the collage */
+.image-collage {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.image-collage img {
+    position: absolute;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 1. Top Left Image (Fully visible near "Paradise") */
+.img-small-top {
+    height: 140px;
+    top: 20px;
+    border: 7px solid white;
+    /* White border as requested */
+    left: -220px;
+    z-index: 3;
+    /* Top layer */
+}
+
+/* 2. Large Middle Image (Behind the top one) */
+.img-large-bg {
+    width: 300px !important;
+    height: 320px;
+    top: 70px;
+    left: -80px;
+    z-index: 1;
+    /* Lowest layer */
+}
+
+/* 3. Bottom Image (Over the large image) */
+.img-small-bottom {
+    width: 220px;
+    height: 150px;
+    border: 7px solid white;
+    /* White border as requested */
+    bottom: 20px;
+    left: -130px;
+    z-index: 4;
+    /* Front layer */
+}
+
+/* The Green Floating Card */
+.culture-box {
+    position: absolute;
+    top: 160px;
+    right: 70px;
+    background: #ed7823;
+    color: white;
+    padding: 25px 15px;
+    border-radius: 15px;
+    z-index: 5;
+    /* Highest layer */
+    width: 190px;
+    text-align: center;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Bold White Icons and Text */
+.culture-content i {
+    font-size: 2rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.culture-content p {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
+/* FEATURES */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* First 4 items bold */
+.feature-list li:nth-child(-n+4) {
+    font-weight: 700;
+}
+
+/* Remaining items normal */
+.feature-list li:nth-child(n+4) {
+    font-weight: 400;
+}
+
+.feature-list li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list i,
+.feature-list img {
+    color: #3266b1;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width:992px) {
+    .image-collage {
+        height: auto;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20% !important;
+    }
+
+    .image-collage img {
+        position: relative;
+        width: 30%;
+    }
+
+    .culture-box {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .culture-box i {
+        font-size: 24px;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
+/* ===================== */
+/* HERO SECTION */
+/* ===================== */
+
+/* Overlay FIX */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: #0000003a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Content */
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Text */
+.top-subtitle {
+    font-size: clamp(14px, 2vw, 18px);
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.main-title {
+    font-size: clamp(26px, 5vw, 60px);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Description */
+.hero-description {
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Rounded Border Button */
+/* Button */
+.discover-btn {
+    background: transparent;
+    color: white;
+    border: 1.5px solid white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.discover-btn:hover {
+    background: #ED7823;
+    color: #143214;
+}
+
+/* ===================== */
+/* RESPONSIVE FIXES */
+/* ===================== */
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .hero-content {
+        padding: 0 10px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    .main-title {
+        line-height: 1.3;
+    }
+}
+
+
+
+
+/* ========================= */
+/* COLLAGE WRAPPER */
+/* ========================= */
+
+.image-collage {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+
+
+}
+
+/* Images */
+.image-collage img {
+    position: absolute;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Top Image */
+.img-small-top {
+    width: 250px;
+    height: 120px;
+    top: 0;
+    left: 0;
+    border: 5px solid white;
+    z-index: 3;
+}
+
+/* Large Image */
+.img-large-bg {
+    height: 260px;
+    top: 60px;
+    right: 0;
+    z-index: 1;
+}
+
+/* Bottom Image */
+.img-small-bottom {
+    width: 50%;
+    height: 130px;
+    bottom: 0;
+    left: 20%;
+    border: 5px solid white;
+    z-index: 4;
+}
+
+/* Culture Box */
+.culture-box {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ed7823;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    width: 160px;
+    z-index: 5;
+}
+
+.floating-info-card {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-20%);
+    /* controlled shift */
+    width: 70%;
+    background: #e5e4e4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .floating-info-card {
+        left: 50%;
+        transform: translateX(-30%);
+        width: 80%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .floating-info-card {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* ========================= */
+/* TEXT STYLING */
+/* ========================= */
+
+.info-item h6 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+}
+
+/* ========================= */
+/* FEATURE LIST */
+/* ========================= */
+
+.feature-item {
+    margin-bottom: 25px;
+}
+
+/* This makes the icon itself bold */
+.icon-box i {
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    /* Adds actual thickness to the icon lines */
+    -webkit-text-stroke: 1px #ffffff;
+    margin-left: .6rem;
+}
+
+.feature-text h5 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.feature-text p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+/* TABLET */
+@media (max-width: 991px) {
+
+    .collage-wrapper {
+        height: 400px;
+    }
+
+    .img-large {
+        height: 300px;
+    }
+
+    .img-small {
+        height: 150px;
+    }
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .collage-wrapper {
+        height: auto;
+        /* IMPORTANT FIX */
+    }
+
+    .collage-wrapper img {
+        position: relative;
+        /* KEY FIX */
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .img-small,
+    .img-large {
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+    .collage-wrapper img {
+        height: 180px;
+    }
+
+
+
+    .info-item p {
+        display: none;
+    }
+}
+
+
+/* SECTION */
+.why-choose-us {
+    background: #fff;
+}
+
+/* COLLAGE WRAPPER */
+.collage-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+/* IMAGES */
+.collage-wrapper img {
+    position: absolute;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* SMALL IMAGE */
+.img-small {
+    width: 45%;
+    height: 160px;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border: 6px solid white;
+}
+
+/* LARGE IMAGE */
+.img-large {
+    width: 75%;
+    height: 320px;
+    top: 60px;
+    right: 0;
+    z-index: 1;
+}
+
+/* FLOATING CARD */
+.floating-info-card {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+}
+
+/* TEXT */
+.section-title {
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #3266b1;
+    font-weight: 600;
+}
+
+/* FEATURES */
+.feature-item {
+    margin-bottom: 20px;
+}
+
+.icon-box {
+    background: #ed7823;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    /* flex-shrink: 0; */
+}
+
+.icon-box i {
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+/* ===================== */
+/* 🔥 RESPONSIVE FIXES */
+/* ===================== */
+
+/* TABLET */
+@media (max-width: 991px) {
+    .collage-wrapper {
+        height: 380px;
+    }
+
+    .img-large {
+        height: 260px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .collage-wrapper {
+        height: auto;
+    }
+
+    .collage-wrapper img {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .img-small,
+    .img-large {
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .floating-info-card {
+        position: relative;
+        transform: none;
+        left: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon-box {
+        margin: 0 auto 10px;
+    }
+}
+
+
+
+
+/* Banner */
+.cta-banner {
+    background: url('/assets/ChatGPT Image Mar 19, 2026, 12_02_12 AM.png') center center / cover no-repeat;
+    border-radius: 20px;
+    padding: 60px 40px;
+    /* 🔥 increase padding */
+    position: relative;
+    height: 320px;
+}
+
+/* Title */
+.cta-title {
+    font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+    .cta-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Image */
+.cta-img {
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Stats Wrapper (Overlap Magic) */
+.stats-wrapper {
+    margin-top: -80px !important;
+    position: relative;
+    z-index: 10;
+    /* 🔥 important */
+}
+
+section.position-relative {
+    overflow: visible;
+    /* 🔥 THIS FIXES HIDDEN ISSUE */
+}
+
+@media (min-width: 768px) {
+    .stats-wrapper {
+        margin-top: 20px;
+        /* no overlap on mobile */
+    }
+}
+
+/* Stats Card */
+.stats-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Each Stat */
+.stat-item {
+    padding: 20px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* Remove borders properly */
+.stat-item:nth-child(2n) {
+    border-right: none;
+}
+
+@media (min-width: 768px) {
+    .stat-item {
+        border-bottom: none;
+    }
+
+    .stat-item:last-child {
+        border-right: none;
+    }
+}
+
+/* Icons */
+.stat-item i {
+    color: #ED7823;
+    font-size: 18px;
+}
+
+/* Gallery */
+.gallery-img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button */
+.btn-orange {
+    background-color: #ED7823;
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: #ff6a00;
+    color: white;
+}

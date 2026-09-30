@@ -1,0 +1,101 @@
+<footer class="footer-section pt-5 pb-3">
+
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-start gap-4 mb-4">
+
+            <!-- LOGO -->
+            <div class="text-center text-md-start">
+                <img routerLink="" src="assets/Logo Final_1.4.png" class="footer-logo">
+            </div>
+
+            <!-- SOCIAL -->
+            <div class="d-flex gap-2 text-white">
+                <div class="social-icon"><a href="https://www.facebook.com/share/1EKR4LfAE9/" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <div class="social-icon"><a href="https://www.instagram.com/destinationz4u__?igsh=ODhmZDg2dDVhaGFj"
+                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="social-icon"><a href="https://wa.me/919963360093" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MAIN GRID -->
+        <div class="row g-4">
+
+            <!-- ABOUT -->
+            <div class="col-md-6 col-lg-3 text-center text-md-start">
+                <p class="small text-white">
+                    Explore the world with our travel services and discover amazing
+                    destinations with unforgettable experiences.
+                </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="col-md-6 col-lg-3 text-center text-md-start">
+                <h6 class="text-white fw-semibold mb-3">Quick Links</h6>
+                <ul class="list-unstyled footer-links">
+                    <li routerLink="/about"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;About Us</li>
+                    <li routerLink="/india"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;India</li>
+                    <li routerLink="/asia"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Asia</li>
+                    <li routerLink="/luxury"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Luxury</li>
+                    <li routerLink="/middle-east"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Middle East</li>
+                    <li routerLink="/contact"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Contact</li>
+                </ul>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="col-md-6 col-lg-3 text-center text-md-start">
+                <h6 class="text-white fw-semibold mb-3">Most Liked</h6>
+                <ul class="list-unstyled footer-links">
+                    <li routerLink="destination/andaman"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Andaman & Nicobar</li>
+                    <li routerLink="destination/indonesia"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Indonesia</li>
+                    <li routerLink="destination/thailand"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Thailand</li>
+                    <li routerLink="destination/goa"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Goa</li>
+                    <li routerLink="destination/malaysia"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Malaysia</li>
+                    <li routerLink="destination/maldives"><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;Maldives</li>
+                </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="col-md-6 col-lg-3">
+                <div class="newsletter-box text-center text-md-start">
+
+                    <h6 class="text-white fw-semibold mb-2">
+                        Subscribe Newsletter
+                    </h6>
+
+                    <p class="small text-white mb-3">
+                        Get latest updates and offers.
+                    </p>
+
+                    <div class="input-group">
+                        <input type="email" [(ngModel)]="newsletterEmail" name="newsletterEmail" class="form-control"
+                            placeholder="Enter Email">
+
+                        <button class="btn btn-orange" (click)="subscribeWhatsApp()">
+                            →
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM -->
+        <div class="text-center small text-white border-top mt-4 pt-3">
+            © 2026 <span class="company-name">Destinationz4U</span>. All Rights Reserved. <span style="font-style: italic;">- Designed by <a
+                    href="https://wingedservices.in/">Winged Services.</a></span>
+        </div>
+
+    </div>
+
+</footer>

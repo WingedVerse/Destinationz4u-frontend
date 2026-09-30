@@ -1,0 +1,142 @@
+<section>
+    <div class="contact-section py-5 px-3">
+        <div class="container">
+            <form (ngSubmit)="sendToWhatsApp()" #contactForm="ngForm">
+
+                <h2 class="text-center fw-bold mb-5 heading-color" data-aos="fade-up">
+                    Contact Us
+                </h2>
+
+                <div class="row g-4">
+
+                    <!-- LEFT FORM -->
+                    <div class="col-lg-8">
+                        <div class="bg-white p-4 p-md-5 rounded-4 shadow">
+
+                            <h3 class="fw-bold mb-2 heading-color" data-aos="fade-up">
+                                Send us a message
+                            </h3>
+                            <p class="text-muted mb-4" data-aos="fade-up">
+                                Do you have a question? Feel free to contact us
+                            </p>
+
+                            <!-- ROW 1 -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6" data-aos="fade-up">
+                                    <label class="form-label fw-bold">First Name</label>
+                                    <input type="text" name="firstName" [(ngModel)]="formData.firstName"
+                                        class="form-control rounded-pill" placeholder="First Name" required>
+                                </div>
+
+                                <div class="col-md-6" data-aos="fade-up">
+                                    <label class="form-label fw-bold">Last Name</label>
+                                    <input type="text" name="lastName" [(ngModel)]="formData.lastName"
+                                        class="form-control rounded-pill" placeholder="Last Name">
+                                </div>
+                            </div>
+
+                            <!-- ROW 2 -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6" data-aos="fade-up">
+                                    <label class="form-label fw-bold">Email</label>
+                                    <input type="email" name="email" [(ngModel)]="formData.email"
+                                        class="form-control rounded-pill" placeholder="Email">
+                                </div>
+
+                                <div class="col-md-6" data-aos="fade-up">
+                                    <label class="form-label fw-bold">Phone</label>
+
+                                    <div class="input-group rounded-pill overflow-hidden">
+                                        <input type="text" name="phone" [(ngModel)]="formData.phone"
+                                            class="form-control border-start-0" placeholder="Enter your number"
+                                            required>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- MESSAGE -->
+                            <div class="mb-4" data-aos="fade-up">
+                                <label class="form-label fw-bold">Message</label>
+                                <textarea name="message" [(ngModel)]="formData.message" class="form-control rounded-4"
+                                    rows="4" placeholder="Enter your message"></textarea>
+                            </div>
+
+                            <!-- BUTTON -->
+                            <div class="text-end" data-aos="fade-up">
+                                <button type="submit" class="btn btn-dark-blue rounded-pill px-4">
+                                    Send a Message
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- RIGHT PANEL -->
+                    <div class="col-lg-4">
+                        <div
+                            class="right-panel text-white p-4 rounded-4 shadow h-100 d-flex flex-column justify-content-between">
+
+                            <!-- TOP -->
+                            <div>
+                                <h3 class="fw-semibold mb-4" data-aos="fade-up">
+                                    Hi! We are always here to help you.
+                                </h3>
+
+                                <div class="info-box d-flex align-items-center gap-3 mb-3" data-aos="fade-up">
+                                    <a class="contact-info text-white" href="tel:+919963360093">
+                                        <i class="fa-solid fa-headphones fs-5"></i>
+                                        <div>
+                                            <small class="opacity-75">Hotline:</small>
+                                            <div class="fw-semibold">+91 99633 60093
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="info-box d-flex align-items-center gap-3 mb-3" data-aos="fade-up">
+                                    <a class="contact-info text-white" href="https://wa.me/9963360093">
+                                        <i class="fa-brands fa-whatsapp fs-5"></i>
+                                        <div>
+                                            <small class="opacity-75">Whatsapp</small>
+                                            <div class="fw-semibold">+91 99633 60093</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="info-box d-flex align-items-center gap-3 mb-3" data-aos="fade-up">
+                                    <a class="contact-info text-white" href="mailto:+sales@destinationz4u.in">
+                                        <i class="fa-regular fa-envelope-open fs-5"></i>
+                                        <div>
+                                            <small class="opacity-75">Email:</small>
+                                            <div class="fw-semibold">sales&#64;<span class="company-name">destinationz4u</span>.in</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- SOCIAL -->
+                            <div class="mt-4 pt-3 border-top border-light">
+                                <p class="fw-semibold mb-3" data-aos="fade-up">Connect with us</p>
+
+                                <div class="d-flex justify-content-between fs-5 social-icons">
+                                    <a href="https://www.facebook.com/share/1EKR4LfAE9/" target="_blank"
+                                        rel="noopener noreferrer"><i class="fa-brands fa-facebook"
+                                            data-aos="fade-up"></i></a>
+                                    <a href="https://www.instagram.com/destinationz4u__?igsh=ODhmZDg2dDVhaGFj" target="_blank"
+                                        rel="noopener noreferrer"><i class="fa-brands fa-instagram"
+                                            data-aos="fade-up"></i></a>
+                                    <a href="https://wa.me/919963360093" target="_blank"
+                                        rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"
+                                            data-aos="fade-up"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

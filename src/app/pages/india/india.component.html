@@ -1,0 +1,123 @@
+<!-- HERO SECTION -->
+<section class="hero d-flex align-items-center justify-content-center">
+
+  <div class="hero-content text-center">
+
+    <h1>India </h1>
+
+    <div class="breadcrumb-text">
+      <span style="color: #ed7823; font-weight: 700;">Home</span> >> India
+    </div>
+  </div>
+</section>
+
+
+
+<!--Section 2 -->
+
+<section class="destination-section">
+
+  <!-- <div class="top-bar">
+    <div class="left-icons">
+      <button class="icon-btn active"><i class="bi bi-grid"></i></button>
+      <button class="icon-btn"><i class="bi bi-list"></i></button>
+    </div>
+    <div class="right-filter">
+      <select>
+        <option>Default Sorting</option>
+      </select>
+    </div>
+  </div> -->
+
+  <div class="card-grid">
+    <div class="card" *ngFor="let item of destinations">
+      <div class="card-img-container">
+        <img [src]="item.img">
+        <span class="rating-badge">⭐ {{item.rating}}</span>
+        <button class="fav-btn"><i class="bi bi-heart"></i></button>
+      </div>
+
+      <div class="card-body">
+        <h3 class="card-title">{{item.title}}</h3>
+        <p class="location-text"><i class="bi bi-geo-alt"></i> {{item.location}}</p>
+        <div class="divider"></div>
+        <div class="card-footer">
+          <!-- <span class="duration"><i class="bi bi-clock"></i> {{item.days}} Days</span> -->
+          <div class="price-container">
+            <!-- <span class="price-label">Start From</span>
+            <span class="price-value">${{item.price}}</span> -->
+            <ul class="highlights-list text-start">
+              <li *ngFor="let point of item.highlights">
+                {{ point }}
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button class="more-btn" (click)="viewDetails(item.id)">
+              <p>know more</p>&nbsp;<i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="pagination-wrapper">
+    <button class="pag-arrow"><i class="bi bi-chevron-left"></i></button>
+    <button class="pag-num active">1</button>
+    <button class="pag-num">2</button>
+    <button class="pag-num">3</button>
+    <button class="pag-num">4</button>
+    <button class="pag-num">5</button>
+    <button class="pag-arrow"><i class="bi bi-chevron-right"></i></button>
+  </div> -->
+</section>
+
+
+
+<!--Section 3-->
+<!-- <section class="destination-offer">
+  <div class="container">
+
+    <div class="content-left">
+      <h1 class="main-heading">Great Hotel <br> Deals!</h1>
+      <p class="sub-paragraph">Get premium hotel deals <br> in affordable price</p>
+
+      <div class="offers-container">
+
+        <div class="offer-bar bank-offer">
+          <div class="bank-section">
+            <div class="bank-logo-placeholder">
+              <i class="fa-solid fa-bed fa-xl text-white"></i>
+            </div>
+            <div class="bank-text">
+              <span class="bold-text">Get extra 10% off</span>
+              <p class="small-text">Diamond Bank offer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer-bar new-user-bar">
+          <span class="green-bold-text">Get extra 5% off for new user</span>
+          <button class="register-btn">Register Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-stack">
+      <div class="image-wrapper">
+        <img src="assets/tropical style.jpeg" class="img-one" alt="Hotel 1">
+
+        <img src="assets/Hotel Nikko San Francisc.jpeg" class="img-two" alt="Hotel 2">
+
+        <div class="discount-card">
+          <p class="starts-from">STARTS FROM</p>
+          <h2 class="off-text">25% OFF</h2>
+          <p class="condition">*CONDITION APPLY</p>
+          <button class="round-play-btn">▶</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->

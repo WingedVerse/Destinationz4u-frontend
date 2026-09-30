@@ -1,0 +1,197 @@
+<!-- HERO SECTION -->
+<section class="contact-hero d-flex align-items-center justify-content-center">
+
+  <div class="hero-content text-center">
+
+    <h1>Contact Us</h1>
+
+    <div class="breadcrumb-text">
+      <span style="color: #ed7823; font-weight: 700;">Home</span> >> Contact Us
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT INFO -->
+
+<section class="contact-info py-5">
+
+  <div class="container">
+
+    <div class="row text-center">
+
+      <div class="col-md-4 mb-4">
+
+        <div class="info-box">
+
+          <div class="icon">
+            <i class="bi bi-house"></i>
+          </div>
+
+          <h5>address line</h5>
+
+          <p>
+            Hyderabad,<br>
+            India.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4 mb-4">
+
+        <div class="info-box">
+
+          <div class="icon">
+            <i class="bi bi-telephone"></i>
+          </div>
+
+          <h5>Phone Number</h5>
+
+          <p>
+            <a class="" href="tel:+919963360093">(+91) 99633 60093</a><br>
+            <!-- +1255-568-6523 -->
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4 mb-4">
+
+        <div class="info-box">
+
+          <div class="icon">
+            <i class="bi bi-envelope"></i>
+          </div>
+
+          <h5>Mail Address</h5>
+
+          <p>
+            <a class="" href="mailto:sales@destinationz4u.in">sales&#64;<span
+                class="company-name">destinationz4u</span>.in</a><br>
+            <!-- info&#64;example.com -->
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- GET IN TOUCH -->
+
+<section class="get-touch py-5">
+
+  <div class="container">
+
+    <div class="row">
+
+      <!-- LEFT SIDE -->
+
+      <div class="col-lg-6 mb-4">
+
+        <h2>Get In Touch</h2>
+
+        <p>
+          We would love to hear from you. If you have any questions, suggestions, or need assistance, feel free to
+          contact us.
+        </p>
+
+        <iframe class="map-img" width="100%" height="400" frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d734067.860384728!2d77.65132285443502!3d17.488801532964604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1775504979373!5m2!1sen!2sin"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+
+
+      <div class="col-lg-6">
+
+        <div class="contact-form">
+          <form (ngSubmit)="sendToWhatsApp()" #contactForm="ngForm">
+
+            <h4 class="form-title">Fill Up The Form</h4>
+
+            <p class="form-text">
+              Your email address will not be published. Required fields are <br>marked *
+            </p>
+
+            <!-- Name -->
+            <div class="input-box">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="fullName" [(ngModel)]="formData.fullName" class="form-control rounded-pill"
+                placeholder="First Name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="input-box">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" name="email" [(ngModel)]="formData.email" class="form-control rounded-pill"
+                placeholder="Email">
+            </div>
+
+
+            <!-- Phone -->
+            <div class="input-box">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="text" name="phone" [(ngModel)]="formData.phone" class="form-control border-start-0"
+                placeholder="Enter your number" required>
+            </div>
+
+            <!-- Message -->
+            <div class="input-box textarea-box">
+              <i class="bi bi-chat-left-text"></i>
+              <textarea name="message" [(ngModel)]="formData.message" class="form-control rounded-4" rows="4"
+                placeholder="Enter your message"></textarea>
+            </div>
+
+            <!-- Button -->
+            <button type="submit" class="btn btn-dark-blue rounded-pill px-4 contact-btn">
+              Send a Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- PARTNER LOGOS -->
+
+<!-- <section class="partners py-4">
+
+  <div class="container text-center">
+
+    <div class="row">
+
+      <div class="col">
+        <img src="assets/s.png" alt="image not show">
+      </div>
+      <div class="col"><img src="assets/s.png" alt="logo"></div>
+      <div class="col"><img src="assets/s.png"></div>
+      <div class="col"><img src="assets/s.png"></div>
+      <div class="col"><img src="assets/s.png"></div>
+
+    </div>
+
+  </div>
+
+</section> -->

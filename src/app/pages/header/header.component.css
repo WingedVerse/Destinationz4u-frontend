@@ -1,0 +1,334 @@
+/* 🔹 Top Bar */
+.top-bar {
+    background: #ED7823;
+    height: 40px;
+}
+
+.fa-brands {
+    padding: 0 .5rem;
+}
+
+.contact-icons i {
+    color: #3266B1 !important;
+}
+
+/* 🔹 Main Navbar */
+.main-navbar {
+    background: #ED7823;
+    height: 102px;
+    position: fixed;
+    z-index: 999 !important;
+    width: 100% !important;
+    top: 0 !important;
+}
+
+/* 🔹 Logo */
+.logo-img {
+    width: 180px;
+}
+
+#menu {
+    justify-content: end !important;
+
+}
+
+/* 🔹 Menu Box (MOST IMPORTANT) */
+.menu-box {
+    background: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-left: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Nav Links */
+.nav-link {
+    color: #333 !important;
+    font-weight: 900;
+}
+
+.nav-link:hover {
+    color: #ED7823 !important;
+}
+
+/* 🔹 Call Box */
+.call-box {
+    color: #3266B1;
+    font-weight: 600;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* 🔹 Button */
+.btn-orange {
+    background: #3266B1;
+    color: white;
+    border-radius: 50px;
+    padding: 6px 18px;
+}
+
+.btn-orange:hover {
+    background: #cf651c;
+}
+
+/* 🔹 Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    background: #3266B1;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.389);
+    color: white;
+    padding: 20px;
+    z-index: 999;
+}
+
+/* 🔹 Social Icons */
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icons i {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 900;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ED7823 !important;
+    font-weight: 700;
+}
+
+.close-btn {
+    color: #fff;
+    text-align: end;
+    width: 100%;
+}
+
+
+
+
+@media (min-width: 1200px) {
+
+    .menu-button,
+    .mobile-menu {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .main-navbar {
+        height: 80px;
+    }
+
+    #menu {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        margin-top: 0rem;
+        top: 0;
+    }
+
+    .logo-img {
+        width: 140px;
+    }
+
+    .nav-link {
+        color: #fff !important;
+        margin: .6rem 0;
+    }
+
+    .call-box {
+        color: #ED7823;
+    }
+
+    .btn-orange {
+        background: #ED7823 !important;
+        color: white;
+        border-radius: 50px;
+        padding: 6px 18px;
+    }
+}
+
+
+
+
+/* ===== DESKTOP DROPDOWN ===== */
+
+/* Remove default bootstrap arrow */
+.navbar .dropdown-toggle::after {
+    display: none;
+}
+
+/* Add custom arrow (right aligned) */
+.navbar .dropdown-toggle {
+    position: relative;
+    padding-right: 18px;
+}
+
+.navbar .dropdown-toggle::before {
+    content: "";
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+    transform: translateY(-50%) rotate(45deg);
+    transition: 0.3s ease;
+}
+
+/* Rotate arrow on open */
+.navbar .dropdown.show .dropdown-toggle::before {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+/* Dropdown container */
+.navbar .dropdown-menu {
+    margin-top: 18px;
+    border: none;
+    border-radius: 14px;
+    padding: 10px;
+    min-width: 240px;
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    animation: dropdownFade .25s ease;
+}
+
+/* Add soft glass effect */
+.navbar .dropdown-menu {
+    backdrop-filter: blur(10px);
+}
+
+/* Dropdown item */
+.navbar .dropdown-menu .dropdown-item {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    transition: all .25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Right arrow on items */
+.navbar .dropdown-menu .dropdown-item::after {
+    content: "›";
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: 0.2s;
+}
+
+/* Hover effect (premium) */
+.navbar .dropdown-menu .dropdown-item:hover {
+    background: #f8f9fb;
+    color: #ED7823;
+    transform: translateX(4px);
+}
+
+/* Show arrow on hover */
+.navbar .dropdown-menu .dropdown-item:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Smooth animation */
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+
+
+
+/* ===== MOBILE DROPDOWN FIX ===== */
+@media (max-width:1200px) {
+
+    /* Make dropdown behave like normal list */
+    .mobile-menu .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        margin: 0 !important;
+        padding: 0;
+    }
+
+
+    .mobile-menu .dropdown-menu.show {
+        display: block;
+    }
+
+    /* Nav link style */
+    .mobile-menu .nav-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 10px;
+        font-weight: 500;
+    }
+
+    /* Dropdown items */
+    .mobile-menu .dropdown-item {
+        color: #fff;
+        padding: 10px 18px;
+        font-size: 14px;
+        border-radius: 6px;
+        transition: 0.2s;
+    }
+
+    /* Hover */
+    .mobile-menu .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateX(4px);
+    }
+
+    /* Arrow rotation */
+    .mobile-menu .dropdown-toggle::after {
+        transition: 0.25s;
+    }
+
+    .mobile-menu .dropdown:focus-within .dropdown-toggle::after {
+        transform: rotate(180deg);
+    }
+}
+
+/* Active dropdown item override */
+.mobile-menu .dropdown-menu .dropdown-item.active,
+.mobile-menu .dropdown-menu .dropdown-item:active {
+    background: #f8f9fb !important;
+    color: #ED7823 !important;
+}
+
+/* Desktop dropdown active */
+.navbar .dropdown-menu .dropdown-item.active,
+.navbar .dropdown-menu .dropdown-item:active {
+    background: #f8f9fb !important;
+    color: #ED7823 !important;
+    font-weight: 900;
+}
+
+.nav-item.active>.nav-link {
+    color: #ED7823 !important;
+    border-radius: 6px;
+}

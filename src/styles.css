@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Arthemis';
+    src: url('/fonts/arthemis/Arthemis.otf') format('woff2'),
+        url('/fonts/arthemis/Arthemis.ttf') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/montserrat/Montserrat-Regular.ttf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blanka';
+    src: url('/fonts/blanka/Blanka-Regular.otf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Meldina';
+    src: url('/fonts/meldina/Meldina-JR5Dm.otf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boldonse';
+    src: url('/fonts/ut-boldonse-demo/UT Boldonse Demo.otf') format('woff2');
+    font-weight: 900 !important;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.company-name {
+    font-family: Roboto, 'Open Sans', sans-serif !important;
+}
+
+.contact-info {
+    text-decoration: none !important;
+}
+
+/* Button */
+.btn-orange {
+    background-color: #ED7823;
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: #ff6a00;
+    color: white;
+}
+
+.bg-primary {
+    background-color: #ED7823 !important;
+    color: #fff;
+}
+
+.cl-primary {
+    color: #ED7823;
+}
+
+.bg-secondary {
+    background-color: #3266B1 !important;
+    color: #fff;
+}
+
+.cl-secondary {
+    color: #3266B1;
+}
